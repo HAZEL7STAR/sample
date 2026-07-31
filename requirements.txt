@@ -1,0 +1,16 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.1
+sqlalchemy==2.0.30
+pymysql==1.1.1
+alembic==1.13.1
+pydantic==2.9.0
+pyudev==0.24.1
+watchdog==4.0.1
+python-magic==0.4.27
+yara-python==4.5.1
+psutil==5.9.8
+py7zr==0.21.0
+oletools==0.60.2
+pefile==2023.2.7
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4

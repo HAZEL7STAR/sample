@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USB Guard Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <h1>Secure USB Device Access Management</h1>
+        <p>Offline-first monitoring, threat visibility, and policy enforcement</p>
+      </header>
+
+      <section class="stats">
+        <div class="card"><h3>Devices</h3><div id="device-count">—</div></div>
+        <div class="card"><h3>Alerts</h3><div id="alert-count">—</div></div>
+        <div class="card"><h3>Transfers</h3><div id="transfer-count">—</div></div>
+        <div class="card"><h3>Sync Pending</h3><div id="sync-pending">—</div></div>
+      </section>
+
+      <section class="panels">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Recent devices</h2>
+            <button id="refresh-btn">Refresh</button>
+          </div>
+          <ul id="device-list"></ul>
+        </div>
+        <div class="panel">
+          <h2>Recent alerts</h2>
+          <ul id="alert-list"></ul>
+        </div>
+      </section>
+
+      <section class="panels">
+        <div class="panel">
+          <h2>Policy control</h2>
+          <form id="policy-form">
+            <label>Device fingerprint</label>
+            <input name="fingerprint" placeholder="optional fingerprint" />
+            <label>Action</label>
+            <select name="rule_type">
+              <option value="whitelist">Allow</option>
+              <option value="blacklist">Block</option>
+              <option value="temp_allow">Temporary allow</option>
+              <option value="temp_block">Temporary block</option>
+            </select>
+            <label>Reason</label>
+            <input name="reason" placeholder="e.g. trusted lab drive" />
+            <button type="submit">Add policy</button>
+          </form>
+          <ul id="policy-list"></ul>
+        </div>
+        <div class="panel">
+          <h2>Recent transfers</h2>
+          <ul id="transfer-list"></ul>
+        </div>
+      </section>
+
+      <section class="panels">
+        <div class="panel full-width">
+          <h2>Recent system logs</h2>
+          <ul id="log-list"></ul>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js?v=2"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  usbguard:
+    build: .
+    container_name: usbguard
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - USBGUARD_DB_HOST=host.docker.internal
