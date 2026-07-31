@@ -3350,3 +3350,206 @@
 2026-07-31 23:41:53,629 WARNING usb_monitor: BLOCKED DEVICE DETECTED (Ultra): No matching policy found; unknown device blocking is enabled.
 2026-07-31 23:41:53,656 INFO usb_monitor: PLUGGED | Ultra (SanDisk) VID=0781 PID=558a SN=4C530000140617114442 node=/dev/sda1 status=blacklisted decision=BLOCK
 2026-07-31 23:41:53,656 WARNING usb_monitor: BLOCKED DEVICE DETECTED (Ultra): No matching policy found; unknown device blocking is enabled.
+2026-08-01 00:12:13,770 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:12:13,770 INFO usbguard.runtime: Started USB monitor subprocess with PID 420924
+2026-08-01 00:12:13,788 WARNING usbguard.runtime: Dashboard snapshot collection failed: (sqlite3.OperationalError) no such column: devices.filesystem
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT devices.fingerprint AS devices_fingerprint, devices.vendor_id AS devices_vendor_id, devices.product_id AS devices_product_id, devices.serial_number AS devices_serial_number, devices.manufacturer AS devices_manufacturer, devices.device_name AS devices_device_name, devices.filesystem AS devices_filesystem, devices.capacity_bytes AS devices_capacity_bytes, devices.usb_version AS devices_usb_version, devices.status AS devices_status, devices.risk_score AS devices_risk_score, devices.first_seen AS devices_first_seen, devices.last_seen AS devices_last_seen 
+FROM devices) AS anon_1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:12:13,826 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:12:13,827 INFO usbguard: USB monitor started
+2026-08-01 00:12:13,830 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:12:13,830 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:12:13,830 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:12:13,831 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:12:14,789 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:12:14,789 INFO usbguard: Backend runtime started
+2026-08-01 00:12:14,790 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:12:14,795 WARNING usbguard.runtime: Dashboard snapshot collection failed: (sqlite3.OperationalError) no such column: devices.filesystem
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT devices.fingerprint AS devices_fingerprint, devices.vendor_id AS devices_vendor_id, devices.product_id AS devices_product_id, devices.serial_number AS devices_serial_number, devices.manufacturer AS devices_manufacturer, devices.device_name AS devices_device_name, devices.filesystem AS devices_filesystem, devices.capacity_bytes AS devices_capacity_bytes, devices.usb_version AS devices_usb_version, devices.status AS devices_status, devices.risk_score AS devices_risk_score, devices.first_seen AS devices_first_seen, devices.last_seen AS devices_last_seen 
+FROM devices) AS anon_1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:12:15,796 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:12:15,796 INFO usbguard: Backend runtime stopped
+2026-08-01 00:12:39,871 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:12:39,871 INFO usbguard.runtime: Started USB monitor subprocess with PID 421755
+2026-08-01 00:12:39,886 WARNING usbguard.runtime: Dashboard snapshot collection failed: (sqlite3.OperationalError) no such column: devices.filesystem
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT devices.fingerprint AS devices_fingerprint, devices.vendor_id AS devices_vendor_id, devices.product_id AS devices_product_id, devices.serial_number AS devices_serial_number, devices.manufacturer AS devices_manufacturer, devices.device_name AS devices_device_name, devices.filesystem AS devices_filesystem, devices.capacity_bytes AS devices_capacity_bytes, devices.usb_version AS devices_usb_version, devices.status AS devices_status, devices.risk_score AS devices_risk_score, devices.first_seen AS devices_first_seen, devices.last_seen AS devices_last_seen 
+FROM devices) AS anon_1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:12:39,925 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:12:39,925 INFO usbguard: USB monitor started
+2026-08-01 00:12:39,930 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:12:39,930 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:12:39,930 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:12:39,931 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:12:40,886 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:12:40,886 INFO usbguard: Backend runtime started
+2026-08-01 00:12:40,887 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:12:42,872 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:12:45,872 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:12:48,873 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:12:51,874 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:12:54,877 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:12:57,878 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:13:00,879 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:13:03,879 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:13:06,880 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:13:09,881 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:13:12,882 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:13:15,882 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:13:18,883 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:13:19,078 WARNING usbguard.runtime: Dashboard snapshot collection failed: (sqlite3.OperationalError) no such column: devices.filesystem
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT devices.fingerprint AS devices_fingerprint, devices.vendor_id AS devices_vendor_id, devices.product_id AS devices_product_id, devices.serial_number AS devices_serial_number, devices.manufacturer AS devices_manufacturer, devices.device_name AS devices_device_name, devices.filesystem AS devices_filesystem, devices.capacity_bytes AS devices_capacity_bytes, devices.usb_version AS devices_usb_version, devices.status AS devices_status, devices.risk_score AS devices_risk_score, devices.first_seen AS devices_first_seen, devices.last_seen AS devices_last_seen 
+FROM devices) AS anon_1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:13:20,078 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:13:20,079 INFO usbguard: Backend runtime stopped
+2026-08-01 00:13:32,619 INFO usbguard.runtime: Started USB monitor subprocess with PID 422870
+2026-08-01 00:13:32,672 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:13:32,672 INFO usbguard: USB monitor started
+2026-08-01 00:13:32,679 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:13:32,679 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:13:32,679 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:13:32,680 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:13:33,655 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:13:33,655 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:13:33,655 INFO usbguard: Backend runtime started
+2026-08-01 00:13:33,659 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:15:53,780 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:17:11,407 INFO usbguard.runtime: Started USB monitor subprocess with PID 472921
+2026-08-01 00:17:11,461 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:17:11,461 INFO usbguard: USB monitor started
+2026-08-01 00:17:11,467 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:17:11,467 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:17:11,467 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:17:11,468 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:17:12,445 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:17:12,446 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:17:12,446 INFO usbguard: Backend runtime started
+2026-08-01 00:17:12,449 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:17:13,457 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:17:13,457 INFO usbguard: Backend runtime stopped
+2026-08-01 00:18:56,233 INFO usbguard.runtime: Started USB monitor subprocess with PID 525541
+2026-08-01 00:18:56,288 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:18:56,288 INFO usbguard: USB monitor started
+2026-08-01 00:18:56,296 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:18:56,297 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:18:56,297 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:18:56,298 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:18:57,273 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:18:57,273 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:18:57,274 INFO usbguard: Backend runtime started
+2026-08-01 00:18:57,277 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:19:25,780 INFO usbguard.runtime: Started USB monitor subprocess with PID 534171
+2026-08-01 00:19:25,827 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:19:25,827 INFO usbguard: USB monitor started
+2026-08-01 00:19:25,833 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:19:25,834 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:19:25,834 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:19:25,835 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:19:26,344 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:19:26,345 INFO usbguard: Backend runtime stopped
+2026-08-01 00:19:26,527 ERROR usb_monitor: Failed to log event for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:19:26,527 ERROR usbguard: USB monitor error for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:19:26,527 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:26,527 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:26,528 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:26,528 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:26,808 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:19:26,811 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:19:26,811 INFO usbguard: Backend runtime started
+2026-08-01 00:19:26,814 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:19:29,402 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,402 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,402 ERROR usb_monitor: Failed to log event for /dev/sda: attempt to write a readonly database
+2026-08-01 00:19:29,402 ERROR usbguard: USB monitor error for /dev/sda: attempt to write a readonly database
+2026-08-01 00:19:29,402 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,402 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,429 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,429 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,430 ERROR usb_monitor: Failed to log event for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:19:29,430 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,430 ERROR usbguard: USB monitor error for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:19:29,430 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:31,991 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:31,991 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:31,991 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:31,991 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:31,991 ERROR usb_monitor: Failed to log event for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:19:31,991 ERROR usbguard: USB monitor error for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:19:32,031 ERROR usb_monitor: Failed to log event for /dev/sda: attempt to write a readonly database
+2026-08-01 00:19:32,031 ERROR usbguard: USB monitor error for /dev/sda: attempt to write a readonly database
+2026-08-01 00:19:32,031 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:32,031 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:32,031 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:32,031 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:33,788 INFO usbguard.runtime: Started USB monitor subprocess with PID 534566
+2026-08-01 00:19:33,830 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:19:33,830 INFO usbguard: USB monitor started
+2026-08-01 00:19:33,837 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:19:33,837 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:19:33,837 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:19:33,838 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:19:34,811 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:19:34,811 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:19:34,811 INFO usbguard: Backend runtime started
+2026-08-01 00:19:34,814 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:19:35,823 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:19:35,823 INFO usbguard: Backend runtime stopped
+2026-08-01 00:20:36,859 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:20:45,354 INFO usbguard.runtime: Started USB monitor subprocess with PID 535607
+2026-08-01 00:20:45,401 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:20:45,401 INFO usbguard: USB monitor started
+2026-08-01 00:20:45,408 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:20:45,408 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:20:45,408 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:20:45,410 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:20:46,385 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:20:46,386 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:20:46,386 INFO usbguard: Backend runtime started
+2026-08-01 00:20:46,389 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:20:47,398 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:20:47,398 INFO usbguard: Backend runtime stopped
+2026-08-01 00:20:51,576 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:21:03,593 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:21:09,377 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:21:22,017 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:21:22,018 INFO usbguard: Backend runtime stopped
+2026-08-01 00:21:25,637 INFO usbguard.runtime: Started USB monitor subprocess with PID 538397
+2026-08-01 00:21:25,685 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:21:25,685 INFO usbguard: USB monitor started
+2026-08-01 00:21:25,692 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:21:25,692 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:21:25,692 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:21:25,693 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:21:26,670 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:21:26,670 INFO usbguard: Backend runtime started
+2026-08-01 00:21:26,670 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:21:26,673 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:21:27,920 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:21:28,927 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:22:02,714 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:22:02,714 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:22:02,714 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:22:02,714 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:22:02,714 ERROR usb_monitor: Failed to log event for /dev/sda: attempt to write a readonly database
+2026-08-01 00:22:02,714 ERROR usbguard: USB monitor error for /dev/sda: attempt to write a readonly database
+2026-08-01 00:22:02,741 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:22:02,742 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:22:02,742 ERROR usb_monitor: Failed to log event for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:22:02,742 ERROR usbguard: USB monitor error for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:22:02,742 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:22:02,742 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:22:25,844 ERROR usb_monitor: Failed to log event for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:22:25,844 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:22:25,844 ERROR usbguard: USB monitor error for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:22:25,844 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:22:25,844 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:22:25,844 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:23:24,521 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:23:24,521 INFO usbguard: Backend runtime stopped

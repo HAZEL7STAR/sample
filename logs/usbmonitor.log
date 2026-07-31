@@ -1,0 +1,86 @@
+2026-08-01 00:12:13,826 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:12:13,827 INFO usbguard: USB monitor started
+2026-08-01 00:12:13,830 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:12:13,830 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:12:13,830 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:12:13,831 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:12:39,925 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:12:39,925 INFO usbguard: USB monitor started
+2026-08-01 00:12:39,930 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:12:39,930 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:12:39,930 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:12:39,931 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:13:32,672 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:13:32,672 INFO usbguard: USB monitor started
+2026-08-01 00:13:32,679 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:13:32,679 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:13:32,679 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:13:32,680 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:17:11,461 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:17:11,461 INFO usbguard: USB monitor started
+2026-08-01 00:17:11,467 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:17:11,467 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:17:11,467 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:17:11,468 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:18:56,288 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:18:56,288 INFO usbguard: USB monitor started
+2026-08-01 00:18:56,296 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:18:56,297 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:18:56,297 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:18:56,298 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:19:25,827 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:19:25,827 INFO usbguard: USB monitor started
+2026-08-01 00:19:25,833 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:19:25,834 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:19:25,834 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:19:25,835 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:19:26,527 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:26,527 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:26,528 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:26,528 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,402 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,402 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,402 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,402 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,429 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,429 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,430 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:29,430 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:31,991 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:31,991 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:31,991 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:31,991 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:19:32,031 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:32,031 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:32,031 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:32,031 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:19:33,830 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:19:33,830 INFO usbguard: USB monitor started
+2026-08-01 00:19:33,837 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:19:33,837 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:19:33,837 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:19:33,838 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:20:45,401 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:20:45,401 INFO usbguard: USB monitor started
+2026-08-01 00:20:45,408 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:20:45,408 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:20:45,408 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:20:45,410 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:21:25,685 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:21:25,685 INFO usbguard: USB monitor started
+2026-08-01 00:21:25,692 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:21:25,692 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:21:25,692 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:21:25,693 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:22:02,714 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:22:02,714 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:22:02,714 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:22:02,714 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:22:02,741 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:22:02,742 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:22:02,742 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:22:02,742 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:22:25,844 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:22:25,844 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:22:25,844 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:22:25,844 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint

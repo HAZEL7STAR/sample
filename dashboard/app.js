@@ -1,4 +1,5 @@
 const API_BASE_URL = window.API_BASE_URL || 'http://127.0.0.1:8001';
+const WS_URL = (window.location.protocol === 'https:' ? 'wss://' : 'ws://') + '127.0.0.1:8001/ws';
 
 function formatTimestamp(value) {
   if (!value) return '—';
@@ -17,47 +18,125 @@ function escapeHtml(value) {
     .replace(/"/g, '&quot;');
 }
 
-async function loadJson(path) {
-  const response = await fetch(`${API_BASE_URL}${path}`);
-  if (!response.ok) {
-    throw new Error(`Request failed: ${response.status}`);
+function setText(id, value) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.textContent = value;
   }
-  return response.json();
 }
 
-async function renderDashboard() {
+function setList(id, items, emptyText = '—') {
+  const container = document.getElementById(id);
+  if (!container) return;
+  if (!items || items.length === 0) {
+    container.innerHTML = `<li>${emptyText}</li>`;
+    return;
+  }
+  container.innerHTML = items.map((item) => `<li>${item}</li>`).join('');
+}
+
+async function loadDashboard() {
   try {
-    const summary = await loadJson('/reports/summary');
-    const devices = await loadJson('/devices');
-    const alerts = await loadJson('/alerts');
-    const sync = await loadJson('/sync/status');
-    const policies = await loadJson('/policies');
-    const transfers = await loadJson('/transfers');
-    const logs = await loadJson('/logs');
-
-    document.getElementById('device-count').textContent = summary.devices;
-    document.getElementById('alert-count').textContent = summary.alerts;
-    document.getElementById('transfer-count').textContent = summary.transfers;
-    document.getElementById('sync-pending').textContent = sync.pending;
-
-    const deviceList = document.getElementById('device-list');
-    deviceList.innerHTML = devices.slice(0, 8).map((device) => `<li><strong>${escapeHtml(device.device_name || device.fingerprint || 'Unknown')}</strong> — ${escapeHtml(device.status || 'unknown')} <small>${formatTimestamp(device.last_seen)}</small></li>`).join('');
-
-    const alertList = document.getElementById('alert-list');
-    alertList.innerHTML = alerts.slice(0, 8).map((alert) => `<li><strong>${escapeHtml(alert.severity || 'info')}</strong> — ${escapeHtml(alert.message || 'No message')}</li>`).join('');
-
-    const policyList = document.getElementById('policy-list');
-    policyList.innerHTML = policies.slice(0, 8).map((policy) => `<li><strong>${escapeHtml(policy.rule_type || 'policy')}</strong> — ${escapeHtml(policy.reason || 'No reason')} <small>${policy.device_fingerprint || 'all devices'}</small></li>`).join('');
-
-    const transferList = document.getElementById('transfer-list');
-    transferList.innerHTML = transfers.slice(0, 8).map((transfer) => `<li>${escapeHtml(transfer.file_name || transfer.path || 'transfer')} — ${escapeHtml(transfer.decision || transfer.direction || 'unknown')} <small>${transfer.blocked ? 'blocked' : 'allowed'}</small></li>`).join('');
-
-    const logList = document.getElementById('log-list');
-    logList.innerHTML = logs.slice(0, 10).map((entry) => `<li><strong>${escapeHtml(entry.level || 'INFO')}</strong> — ${escapeHtml(entry.message || 'No message')} <small>${formatTimestamp(entry.timestamp)}</small></li>`).join('');
+    const response = await fetch(`${API_BASE_URL}/reports/dashboard`);
+    if (!response.ok) {
+      throw new Error(`Request failed: ${response.status}`);
+    }
+    const payload = await response.json();
+    renderDashboard(payload);
   } catch (error) {
-    document.getElementById('device-list').innerHTML = '<li>Backend unavailable. Start the FastAPI service first.</li>';
+    setText('system-health', 'Offline');
+    setList('device-list', ['Backend unavailable. Start the FastAPI service first.']);
     console.error(error);
   }
+}
+
+function renderDashboard(payload) {
+  const summary = payload?.summary || {};
+  const recent = payload?.recent || {};
+  const system = payload?.system || {};
+  const sync = payload?.sync || {};
+
+  setText('device-count', summary.devices ?? 0);
+  setText('alert-count', summary.alerts ?? 0);
+  setText('transfer-count', summary.transfers ?? 0);
+  setText('sync-pending', sync.pending ?? 0);
+  setText('connected-count', summary.devices ?? 0);
+  setText('authorized-count', summary.authorized_devices ?? 0);
+  setText('blocked-count', summary.blocked_devices ?? 0);
+  setText('usb-activity', recent.usb_activity ?? 0);
+  setText('file-activity', recent.file_activity ?? 0);
+  setText('threat-count', summary.threats ?? 0);
+  setText('malware-count', summary.malware ?? 0);
+  setText('risk-score', summary.risk_score ?? 0);
+  setText('system-health', system.healthy ? 'Healthy' : 'Degraded');
+  setText('database-status', system.backend || 'unknown');
+  setText('sync-status', sync.status || 'stopped');
+
+  const deviceList = (recent.devices || []).slice(0, 8).map((device) => {
+    const name = escapeHtml(device.device_name || device.fingerprint || 'Unknown');
+    const status = escapeHtml(device.status || 'unknown');
+    const lastSeen = formatTimestamp(device.last_seen);
+    return `<strong>${name}</strong> — ${status} <small>${lastSeen}</small>`;
+  });
+  setList('device-list', deviceList, 'No devices detected yet.');
+
+  const alertList = (recent.alerts || []).slice(0, 8).map((alert) => {
+    const severity = escapeHtml(alert.severity || 'info');
+    const message = escapeHtml(alert.message || 'No message');
+    return `<strong>${severity}</strong> — ${message}`;
+  });
+  setList('alert-list', alertList, 'No alerts yet.');
+
+  const transferList = (recent.transfers || []).slice(0, 8).map((transfer) => {
+    const fileName = escapeHtml(transfer.file_name || 'transfer');
+    const decision = escapeHtml(transfer.decision || 'unknown');
+    return `${fileName} — ${decision}`;
+  });
+  setList('transfer-list', transferList, 'No transfers recorded yet.');
+
+  const logList = (recent.logs || []).slice(0, 10).map((entry) => {
+    const level = escapeHtml(entry.level || 'INFO');
+    const message = escapeHtml(entry.message || 'No message');
+    const timestamp = formatTimestamp(entry.timestamp);
+    return `<strong>${level}</strong> — ${message} <small>${timestamp}</small>`;
+  });
+  setList('log-list', logList, 'No logs yet.');
+
+  const malwareList = (recent.malware || []).slice(0, 8).map((entry) => {
+    const threat = escapeHtml(entry.threat_name || 'unknown');
+    const risk = escapeHtml(entry.risk_score ?? 0);
+    return `${threat} — risk ${risk}`;
+  });
+  setList('malware-list', malwareList, 'No malware detections yet.');
+
+  const policyList = (recent.policies || []).slice(0, 8).map((policy) => {
+    const rule = escapeHtml(policy.rule_type || 'policy');
+    const reason = escapeHtml(policy.reason || 'No reason');
+    return `<strong>${rule}</strong> — ${reason}`;
+  });
+  setList('policy-list', policyList, 'No policies configured yet.');
+}
+
+function connectSocket() {
+  const socket = new WebSocket(WS_URL);
+  socket.addEventListener('open', () => {
+    setText('system-health', 'Live');
+  });
+  socket.addEventListener('message', (event) => {
+    try {
+      const message = JSON.parse(event.data);
+      if (message?.payload) {
+        renderDashboard(message.payload);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  });
+  socket.addEventListener('close', () => {
+    setText('system-health', 'Reconnecting');
+    window.setTimeout(connectSocket, 1500);
+  });
+  window.__usbguardSocket = socket;
 }
 
 document.getElementById('policy-form').addEventListener('submit', async (event) => {
@@ -81,9 +160,10 @@ document.getElementById('policy-form').addEventListener('submit', async (event) 
   }
 
   form.reset();
-  renderDashboard();
+  loadDashboard();
 });
 
-document.getElementById('refresh-btn').addEventListener('click', renderDashboard);
+document.getElementById('refresh-btn').addEventListener('click', loadDashboard);
 
-renderDashboard();
+loadDashboard();
+connectSocket();
