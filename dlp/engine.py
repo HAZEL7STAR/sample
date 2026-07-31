@@ -1,11 +1,17 @@
 from __future__ import annotations
 
+import hashlib
 import logging
 import os
 import sqlite3
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
+
+from app.core.database import Base, SessionLocal, SQLITE_PATH, create_engine
+from app.models import models
+from sqlalchemy.orm import Session, sessionmaker
 
 log = logging.getLogger("usbguard.dlp")
 
@@ -77,49 +83,43 @@ def evaluate_dlp_policy(payload: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def log_transfer_event(payload: dict[str, Any], db_path: str | os.PathLike[str]) -> dict[str, Any]:
-    result = evaluate_dlp_policy(payload)
-    db_file = Path(db_path)
+def _get_session(db_path: str | os.PathLike[str] | None = None):
+    db_file = Path(db_path) if db_path is not None else SQLITE_PATH
     db_file.parent.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(str(db_file))
+    if str(db_file) != str(SQLITE_PATH):
+        engine = create_engine(f"sqlite:///{db_file}", connect_args={"check_same_thread": False})
+        Base.metadata.create_all(bind=engine)
+        return sessionmaker(bind=engine, autocommit=False, autoflush=False)()
+    return SessionLocal()
+
+
+def log_transfer_event(payload: dict[str, Any], db_path: str | os.PathLike[str] | None = None) -> dict[str, Any]:
+    result = evaluate_dlp_policy(payload)
+    db_file = Path(db_path) if db_path is not None else SQLITE_PATH
+    db_file.parent.mkdir(parents=True, exist_ok=True)
+    session = _get_session(db_file)
     try:
-        conn.execute(
-            """
-            CREATE TABLE IF NOT EXISTS file_transfers (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                path TEXT NOT NULL,
-                direction TEXT NOT NULL,
-                size_bytes INTEGER,
-                extension TEXT,
-                mime_type TEXT,
-                decision TEXT NOT NULL,
-                sensitive INTEGER NOT NULL DEFAULT 0,
-                risk_score REAL NOT NULL,
-                reasons TEXT,
-                timestamp TEXT NOT NULL
+        path = Path(result["path"])
+        sha256 = hashlib.sha256(path.read_bytes()).hexdigest() if path.exists() else None
+        session.add(
+            models.FileTransfer(
+                file_name=path.name,
+                path=result["path"],
+                extension=payload.get("extension") or path.suffix.lower(),
+                mime_type=payload.get("mime_type") or "",
+                size_bytes=payload.get("size_bytes") or 0,
+                sha256=sha256,
+                direction=result["direction"],
+                decision=result["decision"],
+                source_path=result["path"],
+                destination_path=None,
+                blocked=result["decision"] == "block",
+                reason=";".join(result["reasons"]),
+                timestamp=datetime.now(timezone.utc),
             )
-            """
         )
-        conn.execute(
-            """
-            INSERT INTO file_transfers (path, direction, size_bytes, extension, mime_type, decision, sensitive, risk_score, reasons, timestamp)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """,
-            (
-                result["path"],
-                result["direction"],
-                payload.get("size_bytes") or 0,
-                payload.get("extension") or Path(result["path"]).suffix.lower(),
-                payload.get("mime_type") or "",
-                result["decision"],
-                1 if result["sensitive"] else 0,
-                result["risk_score"],
-                ";".join(result["reasons"]),
-                time.strftime("%Y-%m-%dT%H:%M:%S", time.gmtime()),
-            ),
-        )
-        conn.commit()
+        session.commit()
     finally:
-        conn.close()
+        session.close()
 
     return result

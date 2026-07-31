@@ -22,6 +22,9 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
+from app.core.database import Base, SessionLocal, engine as app_engine
+from app.models import models
+
 try:
     import pyudev  # type: ignore
 except Exception as exc:  # pragma: no cover - runtime fallback
@@ -31,8 +34,11 @@ else:
     PYUDEV_IMPORT_ERROR = None
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+BACKEND_ROOT = REPO_ROOT / "backend"
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
+if str(BACKEND_ROOT) not in sys.path:
+    sys.path.insert(0, str(BACKEND_ROOT))
 
 from device_identity import build_identity_from_udev
 from file_monitor.engine import FileMonitorEngine
@@ -168,24 +174,98 @@ def enforce_policy_decision(conn: sqlite3.Connection, identity, decision, action
         record_alert(conn, identity, decision, action)
 
 
-def log_event(conn: sqlite3.Connection, identity, action: str) -> None:
-    now = datetime.now(timezone.utc).isoformat()
-    conn.execute("""
-        INSERT INTO usb_events (
-            fingerprint, action, vendor_id, product_id, serial_number, manufacturer,
-            device_name, filesystem, capacity_bytes, device_node, usb_version, timestamp
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    """, (
-        identity.fingerprint, action, identity.vendor_id, identity.product_id,
-        identity.serial_number, identity.manufacturer, identity.device_name,
-        identity.filesystem, identity.capacity_bytes, identity.device_node,
-        identity.usb_version, now,
-    ))
-    upsert_device(conn, identity, now)
+def discover_mount_path(device_node: str) -> str | None:
+    if not device_node:
+        return None
+    for command in (
+        ["findmnt", "-n", "-o", "TARGET", "-S", device_node],
+        ["findmnt", "-n", "-o", "TARGET", "-T", device_node],
+    ):
+        try:
+            result = subprocess.run(command, check=False, capture_output=True, text=True)
+            if result.returncode == 0 and result.stdout.strip():
+                return result.stdout.strip().splitlines()[0]
+        except Exception:
+            continue
+    mount_table = Path("/proc/self/mounts")
+    if mount_table.exists():
+        for line in mount_table.read_text(encoding="utf-8").splitlines():
+            parts = line.split()
+            if len(parts) >= 2 and parts[0] == device_node:
+                return parts[1]
+    return None
 
-    policies = load_policies(conn)
-    decision = evaluate_policy_decision(policies, identity)
-    enforce_policy_decision(conn, identity, decision, action)
+
+def log_event(identity, action: str, file_monitor=None) -> None:
+    now = datetime.now(timezone.utc)
+    mount_path = None
+    if action in {"mounted", "plugged", "change"}:
+        mount_path = discover_mount_path(identity.device_node or "")
+        if mount_path and file_monitor is not None:
+            file_monitor.add_watch_root(mount_path)
+
+    with SessionLocal() as session:
+        device = session.get(models.Device, identity.fingerprint)
+        if device is None:
+            device = models.Device(
+                fingerprint=identity.fingerprint,
+                vendor_id=identity.vendor_id,
+                product_id=identity.product_id,
+                serial_number=identity.serial_number,
+                manufacturer=identity.manufacturer,
+                device_name=identity.device_name,
+                filesystem=identity.filesystem,
+                capacity_bytes=identity.capacity_bytes,
+                usb_version=identity.usb_version,
+                status="unknown",
+                first_seen=now,
+                last_seen=now,
+            )
+            session.add(device)
+        else:
+            device.last_seen = now
+            device.filesystem = identity.filesystem
+            device.capacity_bytes = identity.capacity_bytes
+            device.usb_version = identity.usb_version
+
+        policies = session.query(models.Policy).all()
+        policy_payloads = [
+            {
+                "id": policy.id,
+                "device_fingerprint": policy.device_fingerprint,
+                "rule_type": policy.rule_type,
+                "expires_at": policy.expires_at,
+                "created_by": policy.created_by,
+                "created_at": policy.created_at,
+                "reason": policy.reason,
+            }
+            for policy in policies
+        ]
+        decision = evaluate_policy_decision(policy_payloads, identity)
+        device.status = decision.status
+
+        session.add(
+            models.USBEvent(
+                device_fingerprint=identity.fingerprint,
+                action=action,
+                device_node=identity.device_node,
+                mount_path=mount_path,
+                bus_number=identity.bus_number,
+                timestamp=now,
+            )
+        )
+
+        if decision.action == "block":
+            session.add(
+                models.Alert(
+                    severity="warning",
+                    category="device",
+                    message=f"{action} event for {identity.device_name} was {decision.action} based on policy: {decision.reason}",
+                    acknowledged=False,
+                    timestamp=now,
+                )
+            )
+        session.commit()
 
     log.info(
         "%s | %s (%s) VID=%s PID=%s SN=%s node=%s status=%s decision=%s",
@@ -251,7 +331,7 @@ def main() -> None:
         action_map = {"add": "plugged", "remove": "removed", "change": "mounted"}
         action = action_map.get(device.action, device.action)
         try:
-            log_event(conn, identity, action)
+            log_event(identity, action, file_monitor=file_monitor)
         except Exception as exc:  # never crash the monitor — log and keep going
             log.error("Failed to log event for %s: %s", identity.device_node, exc)
             log_activity(f"USB monitor error for {identity.device_node}: {exc}", level="error", category="device", db_path=str(DB_PATH))

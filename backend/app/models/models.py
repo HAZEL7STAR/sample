@@ -92,11 +92,13 @@ class FileTransfer(Base):
     id = Column(Integer, primary_key=True)
     device_fingerprint = Column(String(64), ForeignKey("devices.fingerprint"))
     file_name = Column(String(512))
+    path = Column(Text, nullable=True)
     extension = Column(String(32))
     mime_type = Column(String(128))
     size_bytes = Column(BigInteger)
     sha256 = Column(String(64))
     direction = Column(String(16))  # to_usb | from_usb
+    decision = Column(String(16), nullable=True)
     source_path = Column(Text)
     destination_path = Column(Text)
     blocked = Column(Boolean, default=False)

@@ -46,9 +46,15 @@ class OfflineSyncQueue:
                 )
                 """
             )
+            self._ensure_column(conn, "offline_queue", "last_error", "TEXT")
             conn.commit()
         finally:
             conn.close()
+
+    def _ensure_column(self, conn: sqlite3.Connection, table_name: str, column_name: str, column_type: str) -> None:
+        existing = {row[1] for row in conn.execute(f"PRAGMA table_info('{table_name}')")}
+        if column_name not in existing:
+            conn.execute(f"ALTER TABLE {table_name} ADD COLUMN {column_name} {column_type}")
 
     def enqueue(self, table_name: str, payload: dict[str, Any]) -> int:
         with self._lock:

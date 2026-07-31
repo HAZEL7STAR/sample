@@ -9,11 +9,11 @@ DB layer that never blocks the app if MySQL is down.
 
 import logging
 import os
+import sqlite3
 from pathlib import Path
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-from sqlalchemy.exc import OperationalError
 
 log = logging.getLogger("database")
 
@@ -30,6 +30,8 @@ SQLITE_URL = f"sqlite:///{SQLITE_PATH}"
 
 Base = declarative_base()
 
+from app.models import models  # noqa: E402
+
 
 def _build_engine():
     try:
@@ -45,6 +47,13 @@ def _build_engine():
 
 
 engine, ACTIVE_BACKEND = _build_engine()
+if ACTIVE_BACKEND == "sqlite" and SQLITE_PATH.exists():
+    log.info("Resetting local SQLite cache at %s to keep the runtime schema consistent", SQLITE_PATH)
+    SQLITE_PATH.unlink(missing_ok=True)
+    engine.dispose()
+    engine = create_engine(SQLITE_URL, connect_args={"check_same_thread": False})
+    ACTIVE_BACKEND = "sqlite"
+Base.metadata.create_all(bind=engine)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 

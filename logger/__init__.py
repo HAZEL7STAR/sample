@@ -1,11 +1,15 @@
 from __future__ import annotations
 
 import logging
-import sqlite3
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
+
+from app.core.database import Base, SessionLocal, create_engine
+from app.models import models
+from sqlalchemy.orm import sessionmaker
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 DEFAULT_LOG_FILE = ROOT_DIR / "logs" / "usbguard.log"
@@ -57,26 +61,23 @@ def log_activity(message: str, level: str = "info", category: str = "system", db
     db_file = Path(db_path)
     db_file.parent.mkdir(parents=True, exist_ok=True)
     try:
-        conn = sqlite3.connect(str(db_file))
+        if db_path is not None:
+            engine = create_engine(f"sqlite:///{db_file}", connect_args={"check_same_thread": False})
+            Base.metadata.create_all(bind=engine)
+            session = sessionmaker(bind=engine, autocommit=False, autoflush=False)()
+        else:
+            session = SessionLocal()
         try:
-            conn.execute(
-                """
-                CREATE TABLE IF NOT EXISTS system_logs (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    level TEXT NOT NULL,
-                    category TEXT NOT NULL,
-                    message TEXT NOT NULL,
-                    timestamp TEXT NOT NULL
+            session.add(
+                models.SystemLog(
+                    level=level.upper(),
+                    message=message,
+                    timestamp=datetime.now(timezone.utc),
                 )
-                """
             )
-            conn.execute(
-                "INSERT INTO system_logs (level, category, message, timestamp) VALUES (?, ?, ?, ?)",
-                (level.upper(), category, message, time.strftime("%Y-%m-%dT%H:%M:%S", time.gmtime())),
-            )
-            conn.commit()
+            session.commit()
         finally:
-            conn.close()
+            session.close()
     except Exception:
         # Never let logging break the main monitoring flow.
         pass

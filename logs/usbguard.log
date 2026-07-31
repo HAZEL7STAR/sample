@@ -3553,3 +3553,540 @@ FROM devices) AS anon_1]
 2026-08-01 00:22:25,844 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
 2026-08-01 00:23:24,521 WARNING usbguard.runtime: Failed to broadcast snapshot: 
 2026-08-01 00:23:24,521 INFO usbguard: Backend runtime stopped
+2026-08-01 00:28:37,071 WARNING usbguard: Potential threat detected in evil.exe: suspicious executable
+2026-08-01 00:28:42,079 INFO usbguard: File event created scanned: /tmp/usbguard-test-36onpjfk/evil.exe (risk=0.9)
+2026-08-01 00:28:42,080 WARNING usbguard: Blocked suspicious transfer: /tmp/usbguard-test-36onpjfk/evil.exe (['blocked extension'])
+2026-08-01 00:28:42,081 INFO usbguard.file_monitor: File event recorded: created /tmp/usbguard-test-36onpjfk/evil.exe
+2026-08-01 00:28:53,356 WARNING database: MySQL unavailable ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)). Falling back to SQLite offline cache at /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:30:07,147 INFO httpx: HTTP Request: GET http://testserver/reports/dashboard "HTTP/1.1 200 OK"
+2026-08-01 00:30:07,154 INFO httpx: HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-08-01 00:30:07,167 WARNING usbguard: Potential threat detected in test-malware.exe: suspicious executable
+2026-08-01 00:30:38,007 INFO httpx: HTTP Request: GET http://testserver/reports/dashboard "HTTP/1.1 200 OK"
+2026-08-01 00:30:38,014 INFO httpx: HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-08-01 00:32:28,094 INFO httpx: HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-08-01 00:32:28,112 WARNING usbguard: Potential threat detected in test-malware.exe: suspicious executable
+2026-08-01 00:33:02,457 INFO usbguard.runtime: Started USB monitor subprocess with PID 572975
+2026-08-01 00:33:02,736 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:33:02,736 INFO usbguard: USB monitor started
+2026-08-01 00:33:02,750 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:33:02,750 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:33:02,750 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:33:02,752 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:33:03,486 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:33:03,486 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:33:03,487 INFO usbguard: Backend runtime started
+2026-08-01 00:33:03,488 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:33:03,934 INFO httpx: HTTP Request: GET http://testserver/reports/dashboard "HTTP/1.1 200 OK"
+2026-08-01 00:33:03,940 INFO httpx: HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-08-01 00:33:03,959 WARNING usbguard: Potential threat detected in test-malware.exe: suspicious executable
+2026-08-01 00:33:04,631 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:33:06,525 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:33:30,366 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:33:30,366 INFO usbguard: Backend runtime stopped
+2026-08-01 00:33:36,177 INFO usbguard.runtime: Started USB monitor subprocess with PID 574942
+2026-08-01 00:33:36,452 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:33:36,453 INFO usbguard: USB monitor started
+2026-08-01 00:33:36,468 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:33:36,468 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:33:36,468 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:33:36,471 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:33:37,209 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:33:37,209 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:33:37,210 INFO usbguard: Backend runtime started
+2026-08-01 00:33:37,216 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:33:38,851 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:33:40,014 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:33:40,210 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:33:43,211 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:33:46,212 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:33:49,213 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:33:50,496 INFO httpx: HTTP Request: GET http://testserver/reports/dashboard "HTTP/1.1 200 OK"
+2026-08-01 00:33:50,502 INFO httpx: HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-08-01 00:33:50,521 WARNING usbguard: Potential threat detected in test-malware.exe: suspicious executable
+2026-08-01 00:34:17,193 INFO httpx: HTTP Request: GET http://testserver/reports/dashboard "HTTP/1.1 200 OK"
+2026-08-01 00:34:17,199 INFO httpx: HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-08-01 00:34:17,218 WARNING usbguard: Potential threat detected in test-malware.exe: suspicious executable
+2026-08-01 00:34:28,627 INFO usbguard.runtime: Started USB monitor subprocess with PID 576876
+2026-08-01 00:34:28,890 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:34:28,891 INFO usbguard: USB monitor started
+2026-08-01 00:34:28,908 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:34:28,908 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:34:28,908 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:34:28,912 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:34:29,655 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:34:29,656 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:34:29,656 INFO usbguard: Backend runtime started
+2026-08-01 00:34:29,663 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:34:30,675 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:34:30,675 INFO usbguard: Backend runtime stopped
+2026-08-01 00:34:31,284 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:34:34,285 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:34:37,285 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:34:40,286 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:34:43,287 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:34:46,287 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:34:49,288 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:34:52,289 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:34:55,289 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:34:58,290 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:01,291 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:04,292 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:07,292 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:10,293 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:13,294 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:16,295 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:19,296 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:22,297 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:25,298 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:28,298 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:31,299 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:31,851 INFO usbguard.runtime: Started USB monitor subprocess with PID 578279
+2026-08-01 00:35:32,112 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:35:32,112 INFO usbguard: USB monitor started
+2026-08-01 00:35:32,126 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:35:32,126 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:35:32,126 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:35:32,129 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:35:32,880 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:35:32,880 INFO usbguard: Backend runtime started
+2026-08-01 00:35:32,881 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:35:32,887 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:35:33,900 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:35:33,900 INFO usbguard: Backend runtime stopped
+2026-08-01 00:35:34,298 ERROR usb_monitor: Failed to log event for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:35:34,299 ERROR usbguard: USB monitor error for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:35:34,299 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:35:34,299 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:35:34,299 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:34,303 ERROR usb_monitor: Failed to log event for /dev/sda1: (sqlite3.OperationalError) attempt to write a readonly database
+[SQL: INSERT INTO alerts (severity, category, message, acknowledged, timestamp) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('warning', 'device', 'removed event for Ultra was block based on policy: No matching policy found; unknown device blocking is enabled.', 0, '2026-07-31 19:05:34.298726')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:35:34,304 ERROR usbguard: USB monitor error for /dev/sda1: (sqlite3.OperationalError) attempt to write a readonly database
+[SQL: INSERT INTO alerts (severity, category, message, acknowledged, timestamp) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('warning', 'device', 'removed event for Ultra was block based on policy: No matching policy found; unknown device blocking is enabled.', 0, '2026-07-31 19:05:34.298726')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:35:34,388 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:35:34,388 ERROR usb_monitor: Failed to log event for /dev/sda: attempt to write a readonly database
+2026-08-01 00:35:34,388 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:35:34,388 ERROR usbguard: USB monitor error for /dev/sda: attempt to write a readonly database
+2026-08-01 00:35:34,388 ERROR usb_monitor: Failed to log event for /dev/sda: (sqlite3.OperationalError) attempt to write a readonly database
+[SQL: INSERT INTO alerts (severity, category, message, acknowledged, timestamp) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('warning', 'device', 'removed event for Ultra was block based on policy: No matching policy found; unknown device blocking is enabled.', 0, '2026-07-31 19:05:34.387555')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:35:34,389 ERROR usbguard: USB monitor error for /dev/sda: (sqlite3.OperationalError) attempt to write a readonly database
+[SQL: INSERT INTO alerts (severity, category, message, acknowledged, timestamp) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('warning', 'device', 'removed event for Ultra was block based on policy: No matching policy found; unknown device blocking is enabled.', 0, '2026-07-31 19:05:34.387555')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:35:37,300 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:40,301 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:43,302 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:46,304 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:49,304 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:52,305 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:55,306 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:58,307 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:35:59,138 INFO usbguard.runtime: Started USB monitor subprocess with PID 580668
+2026-08-01 00:35:59,378 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:35:59,378 INFO usbguard: USB monitor started
+2026-08-01 00:35:59,392 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:35:59,392 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:35:59,392 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:35:59,395 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:36:00,173 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:36:00,175 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:36:00,175 INFO usbguard: Backend runtime started
+2026-08-01 00:36:00,181 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:36:01,193 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:36:01,193 INFO usbguard: Backend runtime stopped
+2026-08-01 00:36:01,308 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:36:04,309 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:36:07,309 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:36:11,175 INFO usbguard.runtime: Started USB monitor subprocess with PID 583775
+2026-08-01 00:36:11,449 INFO usb_monitor: SQLite offline event store: /home/mathan/Desktop/desktop1/software_hackathon/usb-guard/backend/offline_cache.db
+2026-08-01 00:36:11,449 INFO usbguard: USB monitor started
+2026-08-01 00:36:11,463 INFO usbguard.file_monitor: File monitoring engine started with roots=['/media', '/mnt']
+2026-08-01 00:36:11,464 INFO usb_monitor: USB monitor started. Watching for block devices (subsystem=block)...
+2026-08-01 00:36:11,464 INFO usbguard: USB monitor is watching for device events
+2026-08-01 00:36:11,467 INFO usb_monitor: Plug in / remove a USB drive to see live events. Ctrl+C to stop.
+2026-08-01 00:36:12,210 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:36:12,210 INFO usbguard: Backend runtime started
+2026-08-01 00:36:12,210 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:36:12,216 INFO usbguard.runtime: Backend runtime initialized; USB monitor, sync worker and websocket updates are active
+2026-08-01 00:36:13,949 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:36:15,211 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:36:18,212 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:36:19,836 ERROR usb_monitor: Failed to log event for /dev/sda: attempt to write a readonly database
+2026-08-01 00:36:19,836 ERROR usbguard: USB monitor error for /dev/sda: attempt to write a readonly database
+2026-08-01 00:36:19,837 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:36:19,837 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:36:19,848 ERROR usb_monitor: Failed to log event for /dev/sda: (sqlite3.OperationalError) attempt to write a readonly database
+[SQL: INSERT INTO alerts (severity, category, message, acknowledged, timestamp) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('warning', 'device', 'plugged event for Ultra was block based on policy: No matching policy found; unknown device blocking is enabled.', 0, '2026-07-31 19:06:19.836619')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:36:19,848 ERROR usbguard: USB monitor error for /dev/sda: (sqlite3.OperationalError) attempt to write a readonly database
+[SQL: INSERT INTO alerts (severity, category, message, acknowledged, timestamp) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('warning', 'device', 'plugged event for Ultra was block based on policy: No matching policy found; unknown device blocking is enabled.', 0, '2026-07-31 19:06:19.836619')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:36:19,854 INFO usb_monitor: PLUGGED | Ultra (SanDisk) VID=0781 PID=558a SN=4C530000140617114442 node=/dev/sda status=blacklisted decision=BLOCK
+2026-08-01 00:36:19,854 WARNING usb_monitor: BLOCKED DEVICE DETECTED (Ultra): No matching policy found; unknown device blocking is enabled.
+2026-08-01 00:36:19,875 INFO usbguard.file_monitor: File event recorded: modified /dev/sda1
+2026-08-01 00:36:19,876 ERROR usb_monitor: Failed to log event for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:36:19,876 ERROR usbguard: USB monitor error for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:36:19,876 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:36:19,877 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:36:19,876 INFO usbguard.file_monitor: File event recorded: modified /dev/sda1
+2026-08-01 00:36:19,879 INFO usbguard.file_monitor: File event recorded: created /dev/disk/by-id/.#usb-SanDisk_Ultra_4C530000140617114442-0:0-part1437b8bcf39a2b6ef
+2026-08-01 00:36:19,880 INFO usbguard.file_monitor: File event recorded: moved /dev/disk/by-id/.#usb-SanDisk_Ultra_4C530000140617114442-0:0-part1437b8bcf39a2b6ef
+2026-08-01 00:36:19,882 ERROR usb_monitor: Failed to log event for /dev/sda1: (sqlite3.OperationalError) attempt to write a readonly database
+[SQL: INSERT INTO alerts (severity, category, message, acknowledged, timestamp) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('warning', 'device', 'plugged event for Ultra was block based on policy: No matching policy found; unknown device blocking is enabled.', 0, '2026-07-31 19:06:19.876695')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:36:19,883 ERROR usbguard: USB monitor error for /dev/sda1: (sqlite3.OperationalError) attempt to write a readonly database
+[SQL: INSERT INTO alerts (severity, category, message, acknowledged, timestamp) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('warning', 'device', 'plugged event for Ultra was block based on policy: No matching policy found; unknown device blocking is enabled.', 0, '2026-07-31 19:06:19.876695')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:36:19,883 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-path/.#pci-0000:06:00.4-usbv2-0:1:1.0-scsi-0:0:0:0-part166e32ccce6b43268
+2026-08-01 00:36:19,885 INFO usbguard.file_monitor: File event recorded: moved /dev/disk/by-path/.#pci-0000:06:00.4-usbv2-0:1:1.0-scsi-0:0:0:0-part166e32ccce6b43268
+2026-08-01 00:36:19,887 INFO usbguard.file_monitor: File event recorded: modified /dev/sda1
+2026-08-01 00:36:19,889 INFO usbguard.file_monitor: File event recorded: created /dev/disk/by-id/.#usb-SanDisk_Ultra_4C530000140617114442-0:0-part1437b8bcf39a2b6ef
+2026-08-01 00:36:19,890 INFO usbguard.file_monitor: File event recorded: moved /dev/disk/by-id/.#usb-SanDisk_Ultra_4C530000140617114442-0:0-part1437b8bcf39a2b6ef
+2026-08-01 00:36:19,894 INFO usb_monitor: PLUGGED | Ultra (SanDisk) VID=0781 PID=558a SN=4C530000140617114442 node=/dev/sda1 status=blacklisted decision=BLOCK
+2026-08-01 00:36:19,894 WARNING usb_monitor: BLOCKED DEVICE DETECTED (Ultra): No matching policy found; unknown device blocking is enabled.
+2026-08-01 00:36:19,896 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-path/.#pci-0000:06:00.4-usbv2-0:1:1.0-scsi-0:0:0:0-part166e32ccce6b43268
+2026-08-01 00:36:19,897 INFO usbguard.file_monitor: File event recorded: moved /dev/disk/by-path/.#pci-0000:06:00.4-usbv2-0:1:1.0-scsi-0:0:0:0-part166e32ccce6b43268
+2026-08-01 00:36:19,898 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-diskseq/.#40-part1bd06155aa2798814
+2026-08-01 00:36:19,900 INFO usbguard.file_monitor: File event recorded: moved /dev/disk/by-diskseq/.#40-part1bd06155aa2798814
+2026-08-01 00:36:19,901 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-path/pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part/by-label/BACKUP
+2026-08-01 00:36:19,902 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-path/.#pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part17e75595ed259667a
+2026-08-01 00:36:19,903 INFO usbguard.file_monitor: File event recorded: moved /dev/disk/by-path/.#pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part17e75595ed259667a
+2026-08-01 00:36:19,906 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-diskseq/.#40-part1bd06155aa2798814
+2026-08-01 00:36:19,907 INFO usbguard.file_monitor: File event recorded: moved /dev/disk/by-diskseq/.#40-part1bd06155aa2798814
+2026-08-01 00:36:19,908 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-path/pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part/by-label/BACKUP
+2026-08-01 00:36:19,909 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-path/.#pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part17e75595ed259667a
+2026-08-01 00:36:19,911 INFO usbguard.file_monitor: File event recorded: moved /dev/disk/by-path/.#pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part17e75595ed259667a
+2026-08-01 00:36:19,912 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-partuuid/.#001e460f-0110939055bb4895ce
+2026-08-01 00:36:19,914 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-partuuid/.#001e460f-0110939055bb4895ce
+2026-08-01 00:36:19,916 INFO usbguard.file_monitor: File event recorded: moved /dev/disk/by-partuuid/.#001e460f-0110939055bb4895ce
+2026-08-01 00:36:19,917 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-label/BACKUP
+2026-08-01 00:36:19,918 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-path/pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part/by-uuid/6164-297E
+2026-08-01 00:36:19,919 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-path/pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part/by-partuuid/001e460f-01
+2026-08-01 00:36:19,921 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-path/pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part/by-partnum/1
+2026-08-01 00:36:19,922 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-uuid/.#6164-297Eb2c5462969653642
+2026-08-01 00:36:19,923 INFO usbguard.file_monitor: File event recorded: moved /dev/disk/by-uuid/.#6164-297Eb2c5462969653642
+2026-08-01 00:36:19,924 INFO usbguard.file_monitor: File event recorded: copied /dev/block/.#8:1cffb41a8d42374d2
+2026-08-01 00:36:19,925 INFO usbguard.file_monitor: File event recorded: moved /dev/block/.#8:1cffb41a8d42374d2
+2026-08-01 00:36:19,931 INFO usbguard.file_monitor: File event recorded: moved /dev/disk/by-partuuid/.#001e460f-0110939055bb4895ce
+2026-08-01 00:36:19,933 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-label/BACKUP
+2026-08-01 00:36:19,934 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-path/pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part/by-uuid/6164-297E
+2026-08-01 00:36:19,935 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-path/pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part/by-partuuid/001e460f-01
+2026-08-01 00:36:19,936 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-path/pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part/by-partnum/1
+2026-08-01 00:36:19,937 INFO usbguard.file_monitor: File event recorded: copied /dev/disk/by-uuid/.#6164-297Eb2c5462969653642
+2026-08-01 00:36:19,938 INFO usbguard.file_monitor: File event recorded: moved /dev/disk/by-uuid/.#6164-297Eb2c5462969653642
+2026-08-01 00:36:19,939 INFO usbguard.file_monitor: File event recorded: copied /dev/block/.#8:1cffb41a8d42374d2
+2026-08-01 00:36:19,940 INFO usbguard.file_monitor: File event recorded: moved /dev/block/.#8:1cffb41a8d42374d2
+2026-08-01 00:36:20,468 INFO usbguard.file_monitor: File event recorded: created /dev/shm/.org.chromium.Chromium.iXmenR
+2026-08-01 00:36:20,469 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.iXmenR
+2026-08-01 00:36:20,470 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.iXmenR
+2026-08-01 00:36:20,475 INFO usbguard.file_monitor: File event recorded: created /dev/shm/.org.chromium.Chromium.iXmenR
+2026-08-01 00:36:20,476 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.iXmenR
+2026-08-01 00:36:20,477 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.iXmenR
+2026-08-01 00:36:21,213 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:36:21,239 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.iUR4we
+2026-08-01 00:36:21,241 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.iUR4we
+2026-08-01 00:36:21,242 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.iUR4we
+2026-08-01 00:36:21,243 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.D5BkS1
+2026-08-01 00:36:21,245 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.D5BkS1
+2026-08-01 00:36:21,246 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.D5BkS1
+2026-08-01 00:36:21,247 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.22v8Zv
+2026-08-01 00:36:21,249 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.22v8Zv
+2026-08-01 00:36:21,250 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.22v8Zv
+2026-08-01 00:36:21,256 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.iUR4we
+2026-08-01 00:36:21,257 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.iUR4we
+2026-08-01 00:36:21,258 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.iUR4we
+2026-08-01 00:36:21,259 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.D5BkS1
+2026-08-01 00:36:21,260 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.D5BkS1
+2026-08-01 00:36:21,261 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.D5BkS1
+2026-08-01 00:36:21,263 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.22v8Zv
+2026-08-01 00:36:21,264 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.22v8Zv
+2026-08-01 00:36:21,265 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.22v8Zv
+2026-08-01 00:36:24,214 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:36:24,240 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.h6LtRY
+2026-08-01 00:36:24,242 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.h6LtRY
+2026-08-01 00:36:24,243 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.h6LtRY
+2026-08-01 00:36:24,244 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.Tuko65
+2026-08-01 00:36:24,245 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.Tuko65
+2026-08-01 00:36:24,246 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.Tuko65
+2026-08-01 00:36:24,247 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.3uop9h
+2026-08-01 00:36:24,249 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.3uop9h
+2026-08-01 00:36:24,250 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.3uop9h
+2026-08-01 00:36:24,257 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.h6LtRY
+2026-08-01 00:36:24,259 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.h6LtRY
+2026-08-01 00:36:24,260 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.h6LtRY
+2026-08-01 00:36:24,261 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.Tuko65
+2026-08-01 00:36:24,262 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.Tuko65
+2026-08-01 00:36:24,263 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.Tuko65
+2026-08-01 00:36:24,264 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.3uop9h
+2026-08-01 00:36:24,265 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.3uop9h
+2026-08-01 00:36:24,266 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.3uop9h
+2026-08-01 00:36:26,720 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.L9QBtm
+2026-08-01 00:36:26,721 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.L9QBtm
+2026-08-01 00:36:26,722 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.L9QBtm
+2026-08-01 00:36:26,723 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.L9QBtm
+2026-08-01 00:36:26,725 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.U2eUuA
+2026-08-01 00:36:26,726 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.U2eUuA
+2026-08-01 00:36:26,727 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.L9QBtm
+2026-08-01 00:36:26,729 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.U2eUuA
+2026-08-01 00:36:26,731 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.MxcpG8
+2026-08-01 00:36:26,732 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.MxcpG8
+2026-08-01 00:36:26,733 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.MxcpG8
+2026-08-01 00:36:26,735 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.kabd8s
+2026-08-01 00:36:26,736 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.kabd8s
+2026-08-01 00:36:26,738 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.kabd8s
+2026-08-01 00:36:26,739 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.lXJiYA
+2026-08-01 00:36:26,740 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.lXJiYA
+2026-08-01 00:36:26,741 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.lXJiYA
+2026-08-01 00:36:26,743 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.PVNGyK
+2026-08-01 00:36:26,744 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.PVNGyK
+2026-08-01 00:36:26,746 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.PVNGyK
+2026-08-01 00:36:26,747 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.L9QBtm
+2026-08-01 00:36:26,748 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.U2eUuA
+2026-08-01 00:36:26,749 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.U2eUuA
+2026-08-01 00:36:26,751 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.U2eUuA
+2026-08-01 00:36:26,752 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.MxcpG8
+2026-08-01 00:36:26,753 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.MxcpG8
+2026-08-01 00:36:26,754 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.MxcpG8
+2026-08-01 00:36:26,755 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.kabd8s
+2026-08-01 00:36:26,757 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.kabd8s
+2026-08-01 00:36:26,758 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.kabd8s
+2026-08-01 00:36:26,759 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.lXJiYA
+2026-08-01 00:36:26,761 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.lXJiYA
+2026-08-01 00:36:26,762 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.lXJiYA
+2026-08-01 00:36:26,763 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.PVNGyK
+2026-08-01 00:36:26,764 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.PVNGyK
+2026-08-01 00:36:26,765 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.PVNGyK
+2026-08-01 00:36:27,215 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:36:27,342 INFO usbguard.file_monitor: File event recorded: created /dev/shm/.org.chromium.Chromium.Picm7w
+2026-08-01 00:36:27,344 INFO usbguard.file_monitor: File event recorded: created /dev/shm/.org.chromium.Chromium.Picm7w
+2026-08-01 00:36:27,345 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.Picm7w
+2026-08-01 00:36:27,348 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.Picm7w
+2026-08-01 00:36:27,350 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.Picm7w
+2026-08-01 00:36:27,351 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.Picm7w
+2026-08-01 00:36:29,878 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.fXv74N
+2026-08-01 00:36:29,880 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.fXv74N
+2026-08-01 00:36:29,881 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.fXv74N
+2026-08-01 00:36:29,882 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.ZZPsVv
+2026-08-01 00:36:29,883 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.ZZPsVv
+2026-08-01 00:36:29,884 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.ZZPsVv
+2026-08-01 00:36:29,885 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.RCU84z
+2026-08-01 00:36:29,887 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.RCU84z
+2026-08-01 00:36:29,888 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.RCU84z
+2026-08-01 00:36:29,902 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.fXv74N
+2026-08-01 00:36:29,904 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.fXv74N
+2026-08-01 00:36:29,905 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.fXv74N
+2026-08-01 00:36:29,906 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.ZZPsVv
+2026-08-01 00:36:29,907 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.ZZPsVv
+2026-08-01 00:36:29,908 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.ZZPsVv
+2026-08-01 00:36:29,909 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.RCU84z
+2026-08-01 00:36:29,911 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.RCU84z
+2026-08-01 00:36:29,912 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.RCU84z
+2026-08-01 00:36:30,048 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.vuAJCW
+2026-08-01 00:36:30,049 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.vuAJCW
+2026-08-01 00:36:30,051 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.vuAJCW
+2026-08-01 00:36:30,052 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.x1IKfl
+2026-08-01 00:36:30,054 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.x1IKfl
+2026-08-01 00:36:30,055 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.x1IKfl
+2026-08-01 00:36:30,056 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.QuhC1W
+2026-08-01 00:36:30,058 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.QuhC1W
+2026-08-01 00:36:30,059 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.QuhC1W
+2026-08-01 00:36:30,065 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.vuAJCW
+2026-08-01 00:36:30,066 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.vuAJCW
+2026-08-01 00:36:30,068 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.vuAJCW
+2026-08-01 00:36:30,069 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.x1IKfl
+2026-08-01 00:36:30,071 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.x1IKfl
+2026-08-01 00:36:30,072 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.x1IKfl
+2026-08-01 00:36:30,074 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.QuhC1W
+2026-08-01 00:36:30,075 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.QuhC1W
+2026-08-01 00:36:30,077 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.QuhC1W
+2026-08-01 00:36:30,102 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.FAgOiQ
+2026-08-01 00:36:30,104 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.FAgOiQ
+2026-08-01 00:36:30,105 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.FAgOiQ
+2026-08-01 00:36:30,106 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.FAgOiQ
+2026-08-01 00:36:30,107 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.FAgOiQ
+2026-08-01 00:36:30,109 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.FAgOiQ
+2026-08-01 00:36:30,111 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.gW4HCx
+2026-08-01 00:36:30,112 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.gW4HCx
+2026-08-01 00:36:30,113 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.gW4HCx
+2026-08-01 00:36:30,118 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.gW4HCx
+2026-08-01 00:36:30,120 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.gW4HCx
+2026-08-01 00:36:30,121 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.gW4HCx
+2026-08-01 00:36:30,215 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:36:32,368 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.2EGxbI
+2026-08-01 00:36:32,369 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.2EGxbI
+2026-08-01 00:36:32,370 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.2EGxbI
+2026-08-01 00:36:32,375 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.2EGxbI
+2026-08-01 00:36:32,376 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.2EGxbI
+2026-08-01 00:36:32,377 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.2EGxbI
+2026-08-01 00:36:33,217 WARNING usbguard.runtime: Sync worker error: no such column: last_error
+2026-08-01 00:36:33,251 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.M9Ried
+2026-08-01 00:36:33,253 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.M9Ried
+2026-08-01 00:36:33,254 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.M9Ried
+2026-08-01 00:36:33,255 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.M9Ried
+2026-08-01 00:36:33,256 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.M9Ried
+2026-08-01 00:36:33,258 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.M9Ried
+2026-08-01 00:36:33,260 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.JzbGQD
+2026-08-01 00:36:33,261 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.JzbGQD
+2026-08-01 00:36:33,263 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.JzbGQD
+2026-08-01 00:36:33,264 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.7Ie1ty
+2026-08-01 00:36:33,265 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.7Ie1ty
+2026-08-01 00:36:33,266 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.7Ie1ty
+2026-08-01 00:36:33,267 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.JzbGQD
+2026-08-01 00:36:33,269 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.JzbGQD
+2026-08-01 00:36:33,270 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.JzbGQD
+2026-08-01 00:36:33,271 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.7Ie1ty
+2026-08-01 00:36:33,272 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.7Ie1ty
+2026-08-01 00:36:33,273 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.7Ie1ty
+2026-08-01 00:36:33,461 INFO usbguard.file_monitor: File event recorded: created /dev/shm/.org.chromium.Chromium.O0tQjB
+2026-08-01 00:36:33,462 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.O0tQjB
+2026-08-01 00:36:33,464 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.O0tQjB
+2026-08-01 00:36:33,465 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.O0tQjB
+2026-08-01 00:36:33,467 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.C6MMad
+2026-08-01 00:36:33,468 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.C6MMad
+2026-08-01 00:36:33,470 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.C6MMad
+2026-08-01 00:36:33,471 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.3dnxIF
+2026-08-01 00:36:33,472 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.3dnxIF
+2026-08-01 00:36:33,474 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.3dnxIF
+2026-08-01 00:36:33,478 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.O0tQjB
+2026-08-01 00:36:33,479 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.O0tQjB
+2026-08-01 00:36:33,481 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.O0tQjB
+2026-08-01 00:36:33,482 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.C6MMad
+2026-08-01 00:36:33,483 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.C6MMad
+2026-08-01 00:36:33,485 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.C6MMad
+2026-08-01 00:36:33,486 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.3dnxIF
+2026-08-01 00:36:33,487 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.3dnxIF
+2026-08-01 00:36:33,488 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.3dnxIF
+2026-08-01 00:36:33,499 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.au2U9A
+2026-08-01 00:36:33,501 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.au2U9A
+2026-08-01 00:36:33,503 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.au2U9A
+2026-08-01 00:36:33,505 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.au2U9A
+2026-08-01 00:36:33,509 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.au2U9A
+2026-08-01 00:36:33,510 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.au2U9A
+2026-08-01 00:36:34,787 INFO usbguard.file_monitor: File event recorded: created /dev/shm/.org.chromium.Chromium.eaSHNa
+2026-08-01 00:36:34,789 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.eaSHNa
+2026-08-01 00:36:34,790 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.eaSHNa
+2026-08-01 00:36:34,794 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.eaSHNa
+2026-08-01 00:36:34,795 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.eaSHNa
+2026-08-01 00:36:34,796 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.eaSHNa
+2026-08-01 00:36:35,328 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.DpCcjg
+2026-08-01 00:36:35,329 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.DpCcjg
+2026-08-01 00:36:35,330 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.DpCcjg
+2026-08-01 00:36:35,332 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.1OKhTZ
+2026-08-01 00:36:35,333 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.1OKhTZ
+2026-08-01 00:36:35,334 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.1OKhTZ
+2026-08-01 00:36:35,335 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.RBBjyy
+2026-08-01 00:36:35,336 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.RBBjyy
+2026-08-01 00:36:35,337 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.RBBjyy
+2026-08-01 00:36:35,602 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.TVRrwE
+2026-08-01 00:36:35,603 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.TVRrwE
+2026-08-01 00:36:35,604 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.TVRrwE
+2026-08-01 00:36:36,269 WARNING usbguard.runtime: Failed to broadcast snapshot: 
+2026-08-01 00:36:36,269 INFO usbguard: Backend runtime stopped
+2026-08-01 00:36:37,203 INFO usbguard.file_monitor: File event recorded: modified /dev/bsg/0:0:0:0
+2026-08-01 00:36:37,204 INFO usbguard.file_monitor: File event recorded: deleted /dev/bsg/0:0:0:0
+2026-08-01 00:36:37,206 INFO usbguard.file_monitor: File event recorded: modified /dev/sg0
+2026-08-01 00:36:37,207 INFO usbguard.file_monitor: File event recorded: deleted /dev/sg0
+2026-08-01 00:36:37,208 INFO usbguard.file_monitor: File event recorded: modified /dev/sda1
+2026-08-01 00:36:37,209 INFO usbguard.file_monitor: File event recorded: deleted /dev/sda1
+2026-08-01 00:36:37,211 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-path/pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part/by-partuuid/001e460f-01
+2026-08-01 00:36:37,211 ERROR usb_monitor: Failed to log event for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:36:37,211 ERROR usbguard: USB monitor error for /dev/sda1: table usb_events has no column named fingerprint
+2026-08-01 00:36:37,211 ERROR usb_monitor: Failed to log event for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:36:37,211 ERROR usbguard: USB monitor error for /dev/sda1: attempt to write a readonly database
+2026-08-01 00:36:37,213 ERROR usb_monitor: Failed to log event for /dev/sda1: (sqlite3.OperationalError) attempt to write a readonly database
+[SQL: INSERT INTO alerts (severity, category, message, acknowledged, timestamp) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('warning', 'device', 'removed event for Ultra was block based on policy: No matching policy found; unknown device blocking is enabled.', 0, '2026-07-31 19:06:37.211618')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:36:37,213 ERROR usbguard: USB monitor error for /dev/sda1: (sqlite3.OperationalError) attempt to write a readonly database
+[SQL: INSERT INTO alerts (severity, category, message, acknowledged, timestamp) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('warning', 'device', 'removed event for Ultra was block based on policy: No matching policy found; unknown device blocking is enabled.', 0, '2026-07-31 19:06:37.211618')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:36:37,213 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-path/pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part/by-partnum/1
+2026-08-01 00:36:37,216 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-path/pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part/by-uuid/6164-297E
+2026-08-01 00:36:37,217 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-uuid/6164-297E
+2026-08-01 00:36:37,219 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-id/usb-SanDisk_Ultra_4C530000140617114442-0:0-part1
+2026-08-01 00:36:37,221 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-path/pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part/by-label/BACKUP
+2026-08-01 00:36:37,222 INFO usbguard.file_monitor: File event recorded: deleted /dev/char/245:0
+2026-08-01 00:36:37,224 INFO usbguard.file_monitor: File event recorded: deleted /dev/char/21:0
+2026-08-01 00:36:37,225 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-path/pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0-part1
+2026-08-01 00:36:37,226 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-partuuid/001e460f-01
+2026-08-01 00:36:37,227 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-path/pci-0000:06:00.4-usbv2-0:1:1.0-scsi-0:0:0:0-part1
+2026-08-01 00:36:37,228 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-label/BACKUP
+2026-08-01 00:36:37,229 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-diskseq/40-part1
+2026-08-01 00:36:37,231 INFO usbguard.file_monitor: File event recorded: deleted /dev/block/8:1
+2026-08-01 00:36:37,257 INFO usbguard.file_monitor: File event recorded: modified /dev/sda
+2026-08-01 00:36:37,259 INFO usbguard.file_monitor: File event recorded: deleted /dev/sda
+2026-08-01 00:36:37,259 ERROR usb_monitor: Failed to log event for /dev/sda: attempt to write a readonly database
+2026-08-01 00:36:37,259 ERROR usb_monitor: Failed to log event for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:36:37,259 ERROR usbguard: USB monitor error for /dev/sda: attempt to write a readonly database
+2026-08-01 00:36:37,259 ERROR usbguard: USB monitor error for /dev/sda: table usb_events has no column named fingerprint
+2026-08-01 00:36:37,261 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-path/pci-0000:06:00.4-usbv2-0:1:1.0-scsi-0:0:0:0
+2026-08-01 00:36:37,262 ERROR usb_monitor: Failed to log event for /dev/sda: (sqlite3.OperationalError) disk I/O error
+[SQL: INSERT INTO alerts (severity, category, message, acknowledged, timestamp) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('warning', 'device', 'removed event for Ultra was block based on policy: No matching policy found; unknown device blocking is enabled.', 0, '2026-07-31 19:06:37.259930')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:36:37,262 ERROR usbguard: USB monitor error for /dev/sda: (sqlite3.OperationalError) disk I/O error
+[SQL: INSERT INTO alerts (severity, category, message, acknowledged, timestamp) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('warning', 'device', 'removed event for Ultra was block based on policy: No matching policy found; unknown device blocking is enabled.', 0, '2026-07-31 19:06:37.259930')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-01 00:36:37,265 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-diskseq/40
+2026-08-01 00:36:37,266 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-path/pci-0000:06:00.4-usb-0:1:1.0-scsi-0:0:0:0
+2026-08-01 00:36:37,268 INFO usbguard.file_monitor: File event recorded: deleted /dev/disk/by-id/usb-SanDisk_Ultra_4C530000140617114442-0:0
+2026-08-01 00:36:37,269 INFO usbguard.file_monitor: File event recorded: deleted /dev/block/8:0
+2026-08-01 00:36:37,322 INFO usbguard.file_monitor: File event recorded: modified /dev/bus/usb/008/005
+2026-08-01 00:36:37,324 INFO usbguard.file_monitor: File event recorded: deleted /dev/bus/usb/008/005
+2026-08-01 00:36:37,334 INFO usbguard.file_monitor: File event recorded: copied /dev/char/.#189:90077c742d16e5f6dc9
+2026-08-01 00:36:37,335 INFO usbguard.file_monitor: File event recorded: moved /dev/char/.#189:90077c742d16e5f6dc9
+2026-08-01 00:36:37,337 INFO usbguard.file_monitor: File event recorded: deleted /dev/char/189:900
+2026-08-01 00:36:37,341 INFO usbguard.file_monitor: File event recorded: deleted /dev/vboxusb/008/005
+2026-08-01 00:36:38,112 INFO usbguard.file_monitor: File event recorded: created /dev/shm/.org.chromium.Chromium.9rHCJI
+2026-08-01 00:36:38,114 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.9rHCJI
+2026-08-01 00:36:38,115 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.9rHCJI
+2026-08-01 00:36:38,768 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.1Z3OXP
+2026-08-01 00:36:38,770 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.1Z3OXP
+2026-08-01 00:36:38,771 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.1Z3OXP
+2026-08-01 00:36:40,220 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.OxvlLX
+2026-08-01 00:36:40,222 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.OxvlLX
+2026-08-01 00:36:40,223 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.OxvlLX
+2026-08-01 00:36:40,225 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.POHhSX
+2026-08-01 00:36:40,226 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.POHhSX
+2026-08-01 00:36:40,227 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.POHhSX
+2026-08-01 00:36:40,229 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.wv87oz
+2026-08-01 00:36:40,230 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.wv87oz
+2026-08-01 00:36:40,231 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.wv87oz
+2026-08-01 00:36:41,139 WARNING usbguard.file_monitor: Malware scan failed for /dev/shm/.org.chromium.Chromium.ZuIhva: /dev/shm/.org.chromium.Chromium.ZuIhva
+2026-08-01 00:36:41,139 ERROR usbguard: File monitoring error for /dev/shm/.org.chromium.Chromium.ZuIhva: /dev/shm/.org.chromium.Chromium.ZuIhva
+2026-08-01 00:36:41,145 INFO usbguard.file_monitor: File event recorded: created /dev/shm/.org.chromium.Chromium.ZuIhva
+2026-08-01 00:36:41,147 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.ZuIhva
+2026-08-01 00:36:41,149 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.ZuIhva
+2026-08-01 00:36:42,718 INFO usbguard.file_monitor: File event recorded: created /dev/shm/.org.chromium.Chromium.FoKa1P
+2026-08-01 00:36:42,719 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.FoKa1P
+2026-08-01 00:36:42,720 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.FoKa1P
+2026-08-01 00:36:45,489 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.GMU5Ua
+2026-08-01 00:36:45,490 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.GMU5Ua
+2026-08-01 00:36:45,491 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.GMU5Ua
+2026-08-01 00:36:48,263 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.I4PZxV
+2026-08-01 00:36:48,264 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.I4PZxV
+2026-08-01 00:36:48,265 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.I4PZxV
+2026-08-01 00:36:57,146 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.uJKPbJ
+2026-08-01 00:36:57,148 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.uJKPbJ
+2026-08-01 00:36:57,149 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.uJKPbJ
+2026-08-01 00:36:57,151 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.L3YLaL
+2026-08-01 00:36:57,152 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.L3YLaL
+2026-08-01 00:36:57,153 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.L3YLaL
+2026-08-01 00:36:57,154 INFO usbguard.file_monitor: File event recorded: copied /dev/shm/.org.chromium.Chromium.SlUxnp
+2026-08-01 00:36:57,156 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.SlUxnp
+2026-08-01 00:36:57,157 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.SlUxnp
+2026-08-01 00:36:58,843 INFO usbguard.file_monitor: File event recorded: created /dev/shm/.org.chromium.Chromium.z9Rh4T
+2026-08-01 00:36:58,844 INFO usbguard.file_monitor: File event recorded: modified /dev/shm/.org.chromium.Chromium.z9Rh4T
+2026-08-01 00:36:58,846 INFO usbguard.file_monitor: File event recorded: deleted /dev/shm/.org.chromium.Chromium.z9Rh4T
